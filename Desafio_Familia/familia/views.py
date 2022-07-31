@@ -22,10 +22,13 @@ def inicio(request):
 
 
 def lista_familia(request):
-    familia = mi_familia.objects.all()
+    familiares = mi_familia.objects.all()
     datos_familia = []
 
-    for persona in familia:
+    for integrante in familiares:
         datos_familia.append(mi_familia.nombre)
+        datos_familia.append(mi_familia.apellido)
+        datos_familia.append(mi_familia.edad)
+        datos_familia.append(mi_familia.fecha_nacimiento)
 
     return HttpResponse(datos_familia)
