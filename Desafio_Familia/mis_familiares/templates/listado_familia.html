@@ -8,15 +8,13 @@
 </head>
 <body>
 
-  <h2>Mi familia esta compuesta por:</h2>
+  <h1 style="color: brown">MI FAMILIA ESTA COMPUESTA POR:</h1>
 
     {% for persona in familiares %}
 
-        {{persona.nombre}}
-        {{persona.apellido}}
-        {{persona.edad}}
-        {{persona.fecha_nacimiento}}
+        <h2 style="color: green">{{persona.nombre}} {{persona.apellido.upper}} | {{persona.edad}} | {{persona.fecha_nacimiento}}</h2>
 
     {% endfor %}
+    
 
 </body>

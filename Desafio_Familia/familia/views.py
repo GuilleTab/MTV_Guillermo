@@ -24,4 +24,4 @@ def inicio(request):
 def lista_familia(request):
     familiares = mi_familia.objects.all()
 
-    return render(request, "index.html", {"familiares":familiares})
+    return render(request, "listado_familia.html", {"familiares":familiares})
