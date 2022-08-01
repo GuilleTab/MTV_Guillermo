@@ -10,6 +10,13 @@
 
   <h2>Mi familia esta compuesta por:</h2>
 
-</body>
+    {% for persona in familiares %}
 
-</html>
+        {{persona.nombre}}
+        {{persona.apellido}}
+        {{persona.edad}}
+        {{persona.fecha_nacimiento}}
+
+    {% endfor %}
+
+</body>

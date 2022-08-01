@@ -55,7 +55,7 @@ ROOT_URLCONF = 'mis_familiares.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [r"C:\Users\guill\OneDrive\Escritorio\Python\MVT_Guillermo\Desafio_Familia\mis_familiares\templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

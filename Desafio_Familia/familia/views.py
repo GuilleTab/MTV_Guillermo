@@ -5,7 +5,7 @@ from django.http import HttpResponse
 from familia.models import mi_familia
 
 def info_familia(request):
-    return HttpResponse("DATOS DE MIS FAMILIARES")
+    return HttpResponse("<h1>DATOS DE MIS FAMILIARES</h1>")
 
 
 def inicio(request):
@@ -23,12 +23,5 @@ def inicio(request):
 
 def lista_familia(request):
     familiares = mi_familia.objects.all()
-    datos_familia = []
 
-    for integrante in familiares:
-        datos_familia.append(mi_familia.nombre)
-        datos_familia.append(mi_familia.apellido)
-        datos_familia.append(mi_familia.edad)
-        datos_familia.append(mi_familia.fecha_nacimiento)
-
-    return HttpResponse(datos_familia)
+    return render(request, "index.html", {"familiares":familiares})
